@@ -4,9 +4,7 @@ const path = require("path");
 const { Home, Post, Cdn } = require("./controllers");
 
 const app = express();
-app.use(express.static(path.join(__dirname, "..", "public")));
-app.disable("x-powered-by");
-app.enable("trust proxy");
+app.use(express.static("public"));
 
 app.get("/", Home);
 app.get("/:query", Post);
