@@ -1,7 +1,7 @@
 const serverless = require("serverless-http");
 const express = require("express");
 const path = require("path");
-const { Home, Post, Cdn } = require("./app/controllers");
+const { Home, Post, Cdn } = require("./controllers");
 
 const app = express();
 app.use(express.static(path.join(__dirname, "..", "public")));
