@@ -9,7 +9,7 @@ const set = async (obj) => {
 };
 
 const Home = async (req, res) => {
-  return res.send("/");
+  return res.send(await set("title"));
 };
 
 const Post = async (req, res) => {
