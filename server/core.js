@@ -8,7 +8,7 @@ app.use(express.static("public"));
 
 app.get("/", Home);
 app.get("/:query", Post);
-app.get("/cdn/:query.png", Cdn);
+app.get("/:query.png", Cdn);
 
 module.exports = app;
 module.exports.handler = serverless(app);
